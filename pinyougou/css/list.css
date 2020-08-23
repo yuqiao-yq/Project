@@ -1,0 +1,171 @@
+/* 列表页专用CSS */
+.nav {
+    overflow: hidden;
+}
+.sk {
+    position: absolute;
+    left: 190px;
+    top: 40px;
+    border-left: 1px solid #c81523;
+    padding: 3px 0 0 14px;
+}
+.sk_list {
+    float: left;
+}
+.sk_list ul li {
+    float: left;
+}
+.sk_list ul li a {
+    display: block;
+    line-height: 47px;
+    padding: 0 30px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+}
+.sk_con {
+    float: left;
+}
+.sk_con ul li {
+    float: left;
+}
+.sk_con ul li a {
+    display: block;
+    line-height: 49px;
+    padding: 0 20px;
+    font-size: 14px;
+    font-weight: normal;
+}
+.sk_con ul li:last-child a::after {
+    content: '\ea52';
+    font-family: 'icomoon';
+}
+.sk_bd ul li {
+    overflow: hidden;
+    float: left;
+    margin-right: 13px;
+    width: 290px;
+    height: 448px;
+    /* 让li本身自带一个透明边框，防止加鼠标移动显示边框时出现抖动 */
+    border: 1px solid transparent;
+}
+.sk_bd ul li:nth-child(4n) {
+margin-right: 0;
+}
+.sk_bd ul li:hover {
+    border: 1px solid  #c81523;
+}
+.sk_bd ul li a {
+    display: block;
+    overflow: hidden;
+}
+.sk_bd ul li a img {
+    transition: all 0.4s;
+}
+.sk_bd ul li a img:hover {
+transform: scale(1.1);
+}
+
+.clearfix li a p{
+font-size: 14px;
+padding: 0 12px;
+}
+.clearfix li a p:hover {
+    color: red;
+}
+.price strong{
+font-size: 22px;
+color: #e60012;
+}
+.price s {
+font-size: 14px;
+color: #a4a4a4;
+}
+.operate {
+    margin-top: 14px;
+    background-color: #b1191a;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    font-size: 20px;
+}
+.operate a {
+    color:#ffffff;
+}
+.price, .sold, .operate {
+    padding: 0 12px;
+}
+
+/* 页码 */
+.page {
+    margin-top: 10px;
+    display: block;
+    height: 66px;
+    text-align: center;
+}
+.page .pagination {
+    display: inline-block;
+   padding:0s auto;
+}
+.page li {
+    /* float: left; */
+    display: block;
+    font-size: 14px;
+    line-height: 18px;
+    width: 44.65px;
+    height: 37.78px;
+}
+.page .pagination ul li {
+    width: 45.7px;
+    height: 37.8px;
+    border: 1px solid #ccc;
+    margin-right: 15px;
+}
+.page .pagination ul li:hover {
+    background-color: #ccc;
+    color: #fff;
+}
+.page .pagination .prevDisabled, 
+.page .pagination .next{
+    width: 87px;
+}
+.page .pagination ul li a {
+    padding: 10px 0;
+}
+.page .pagination .dotted {
+    border-style: hidden;
+    padding-top: 10px;
+}
+
+.slider-bar {
+    position: absolute;
+    left: 50%;
+    top: 300px;
+    margin-left: 602px;
+    width: 45px;
+    height: 130px;
+    /* background-color:pink; */
+}
+.slider-bar span {
+    display: none;
+    width: 45px;
+    height: 130px;
+    position: absolute;
+    /* top: 10px;
+    left: 15px; */
+    bottom: 0;
+    text-align: center;
+    color: #fff;
+    background-color:#c81623;
+}
+.slider-bar span em {
+    display: block;
+    font-size: 20px;
+    margin-top: 16px;
+}
+.slider-bar span p {
+    display: block;
+    width: 45px;
+    margin-top: 16px;
+    font-size: 17px;
+}

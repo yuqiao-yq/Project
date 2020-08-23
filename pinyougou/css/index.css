@@ -1,0 +1,405 @@
+.main {
+    position: relative;
+    width: 980px;
+    height: 455px;
+    margin-left: 220px;
+    margin-top: 10px;
+}
+.focus {
+    position: relative;
+    float: left;
+    width: 721px;
+    height: 455px;
+    /* background-color:blue; */
+    overflow: hidden;
+}
+.focus ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 600%;
+}
+.focus ul li {
+    float: left;
+    width: 721px;
+}
+.arrow-l ,
+.arrow-r {
+    display: none;
+    position: absolute;
+    top:50%;
+    margin-top: -20px;
+    width: 24px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, .3);
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    font-family: 'icomoon';
+    font-size: 18px;
+    /* ul加了定位后，会把arrow-l和arrow-r压住，所以给它们加z轴的高度 */
+    z-index: 2;
+}
+.arrow-r {
+    right: 0;
+}
+.circle {
+    position: absolute;
+    bottom: 10px;
+    left: 50px;
+}
+.circle li {
+    float: left;
+	width: 15px;
+	height: 15px;
+	/*background-color: #fff;*/
+	border: 2px solid rgba(255, 255, 255, 0.5);
+	margin: 0 3px;
+	border-radius: 50%;
+	/*鼠标经过显示小手*/
+	cursor: pointer;
+}
+.current {
+	background-color: #fff;
+	box-shadow: none;
+}
+.newsflash {
+    float: right;
+    width: 250px;
+    height: 455px;
+}
+.news {
+    height: 165px;
+    border: 1px solid #e4e4e4;
+}
+.news-hd {
+   height: 33px;
+   line-height: 33px;
+    border-bottom: 1px dotted #e4e4e4;
+    padding: 0 15px;
+}
+.news-hd h5 {
+    float: left;
+    font-size: 14px;
+}
+.news-hd .more {
+    float: right;
+}
+.news-hd .more::after {
+    content: '\ea50';
+    font-family: 'icomoon';
+}
+.news-bd {
+    padding: 5px 15px 0;
+}
+.news-bd ul li {
+    height: 24px;
+    line-height: 24px;
+    /* 超出一行的文字省略号显示 */
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.lifeservice {
+    overflow: hidden;
+height: 209px;
+border: 1px solid #e4e4e4;
+border-top: 0;
+}
+.lifeservice ul {
+    width: 252px;
+}
+.lifeservice ul li {
+    float: left;
+    width: 63px;
+    height: 71px;
+    border-right: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+    text-align: center;
+}
+.lifeservice ul li i {
+    display: inline-block;
+    width: 24px;
+    height: 28px;
+    background-color:pink;
+    margin-top: 12px;
+    background: url(../images/icons.png) no-repeat -17px -15px;
+}
+.bargain {
+    margin-top: 5px;
+}
+
+/* 精品推荐 */
+.recom {
+    height: 163px;
+    background-color: #ebebeb;
+    margin-top: 12px;
+}
+.recom_hd {
+    float: left;
+    height: 163px;
+    width: 205px;
+    background-color: #5c5251;
+    text-align: center;
+    padding-top: 30px;
+}
+.recom_bd {
+float: left;
+}
+.recom_bd ul li {
+    position: relative;
+    float: left;
+}
+.recom_bd ul li img {
+    width: 248px;
+    height: 163px;
+}
+.recom_bd ul li:nth-child(-n+3)::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 10px;
+    height: 145px;
+    width: 1px;
+    background-color: #e4e4e4;
+}
+
+/* 猜你喜欢 */
+.box_biaoti {
+    height: 45px;
+    margin-top: 30px;
+}
+.box_biaoti ul .guess_L{
+float: left;
+font-size: 18px;
+}
+.box_biaoti ul .guess_R {
+    float: right;
+}
+.box_guess {
+    width: 1200px;
+    height: 250px;
+    border: 1px solid #cccccc;
+}
+.box_guess ul {
+    float: left;
+    width: 1200px;
+    margin-top: 10px;
+}
+.box_guess ul li {
+   /* 子绝父相 */
+   position: relative;
+   float: left;
+   width: 199.5px;
+   height: 231px;
+   background-color: #fff;
+   /* margin-right: 15px; */
+   margin-bottom: 15px;
+}
+.box_guess ul li:nth-child(-n+5)::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 10px;
+    height: 145px;
+    width: 1px;
+    background-color: #e4e4e4;
+}
+.box_guess ul li  img {
+    /* width: 100%; */
+    height: 150px;
+    display: block;
+    margin: auto;
+}
+.box_guess ul li a {
+    /* margin: 20px 20px 20px 25px; */
+    display: block;
+    overflow: hidden;
+    font-size: 14px;
+    color: #050505;
+    font-weight: 400;
+}
+.box_guess ul li a img {
+    transition: all 0.4s;
+}
+.box_guess ul li a img:hover {
+    transform: scale(1.1);
+}
+.box_guess ul li p {
+    /* display: inline; */
+    overflow: visible;
+    height: 40px;
+    text-align: center;
+}
+.box_guess ul li p:hover {
+    color: #c81623;
+}
+.box_guess ul li span {
+    display: block;
+    margin-top : 10px;
+}
+.box_guess ul li .price {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    color: #df3033;
+}
+
+/* 家用电器 */
+.box_hd {
+    height: 30px;
+    border-bottom: 2px solid #c81623;
+}
+.box_hd h4 {
+float: left;
+font-size: 18px;
+color: #c81623;
+font-weight: normal;
+}
+.box_hd .tab_list {
+float: right;
+line-height: 30px;
+}
+.box_hd .tab_list ul li {
+    float: left;
+}
+.box_hd .tab_list ul li a {
+    padding: 0 8px;
+}
+.floor .jiadian {
+    margin-top: 30px;
+}
+.box_bd {
+    height: 361px;
+}
+.tab_list_item>div {
+    float: left;
+}
+.col_210 {
+    width: 210px;
+    height: 361px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+.col_210 ul {
+    padding-left: 12px;
+}
+.col_210 ul li {
+    float: left;
+    width: 85px;
+    height: 34px;
+    border-bottom: 1px solid #ededed;
+    font-size: 12px;
+    text-align: center;
+    line-height: 32px;
+    margin-right: 10px;
+}
+.col_210 ul a  img {
+   padding-top: 15px;
+}
+.col_329 {
+    width: 329px;
+}
+.col_221 {
+    width: 221px;
+    height: 361px;
+    border-right: 1px solid #cccccc;
+}
+.col_221 ul a img {
+    margin: 14px 0px 5px 14px;
+}
+.col_221 .juli {
+    display: block;
+    margin: 70px 0px 5px 14px;
+}
+.col_219 {
+    width: 219px;
+}
+.col_219 a img {
+    margin:14px 0px 5px 14px;
+}
+
+.bb {
+    /* 一般情况下，a如果包含有宽度的盒子，a需要转换为块级元素 */
+    display: block;
+    border-bottom: 1px solid #cccccc;
+}
+.pinpai {
+    margin-top: 39px;
+}
+
+/* 电梯导航 */
+.fixedtool {
+    position: fixed;
+    top: 270px;
+    left: 47%;
+    margin-left: -676px;
+    width: 66px;
+    /* background-color: #fff; */
+}
+.fixedtool ul {
+    /* display: block; */
+    list-style-type: disc;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+.fixedtool ul li {
+    width: 66px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 14px;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+}
+.fixedtool ul li:nth-child(1) {
+    border-top: 1px solid #ccc;
+}
+.fixedtool ul li:hover {
+    background-color: #c81623;
+    color: #fff;
+}
+.fixedtool .current {
+	background-color: #c81623;
+	color: #fff;
+}
+/* body {
+    position: relative;
+} */
+.slider-bar {
+    position: absolute;
+    left: 50%;
+    top: 300px;
+    margin-left: 602px;
+    width: 45px;
+    height: 130px;
+    /* background-color:pink; */
+
+}
+.slider-bar span {
+    display: none;
+    width: 45px;
+    height: 130px;
+    position: absolute;
+    /* top: 10px;
+    left: 15px; */
+    bottom: 0;
+    text-align: center;
+    color: #fff;
+    background-color:#c81623;
+}
+.slider-bar span em {
+    display: block;
+    font-size: 20px;
+    margin-top: 16px;
+}
+.slider-bar span p {
+    display: block;
+    width: 45px;
+    margin-top: 16px;
+    font-size: 17px;
+}
