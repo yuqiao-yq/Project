@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="css/base.css">
     <!-- 引入注册界面的CSS -->
     <link rel="stylesheet" href="css/register.css">
+    <!-- 引入验证表单JS文件 -->
+    <script src="js/reg.js"></script>
 </head>
 
 <body>
@@ -28,23 +30,23 @@
                 <form action="">
                     <ul>
                         <li><label for="">手机号：</label>
-                            <input type="tel" class="inp"><span class="error">
-                                <i class="error_icon"></i> 手机号码格式不正确，请重新输入</span>
+                            <input type="tel" class="inp" id="tel"><span class="">
+                            </span>
                         </li>
                         <li><label for="">短信验证码：</label>
-                            <input type="text" class="inp"><span class="success">
-                                <i class="success_icon"></i> 短信验证码输入正确</span>
+                            <input type="text" class="inp" id="msg"><span class="">
+                            </span>
                         </li>
                         <li><label for="">登录密码：</label>
-                            <input type="password" class="inp"><span class="error">
-                                <i class="error_icon"></i> 手机号码格式不正确，请重新输入</span>
+                            <input type="password" class="inp" id="pwd"><span class="">
+                            </span>
                         </li>
                         <li class="safe">
                             安全程度 <em class="ruo">弱</em> <em class="zhong">中</em> <em class="qiang">强</em>
                         </li>
                         <li><label for="">确认密码：</label>
-                            <input type="password" class="inp"><span class="error">
-                                <i class="error_icon"></i> 手机号码格式不正确，请重新输入</span>
+                            <input type="password" class="inp" id="surepwd"><span class="">
+                            </span>
                         </li>
                         <li class="agree"><input type="checkbox" name="" id="">同意协议并注册<a href="#">《知晓用户协议》</a></li>
                         <li><input type="submit" value="提交注册" class="btn"></li>
