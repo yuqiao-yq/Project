@@ -1,120 +1,147 @@
 .w {
     width: 1200px;
-    margin: 0 auto;
+    margin: auto;
 }
-header {
-    height: 84px;
+
+.header {
+    height: 82px;
     border-bottom: 2px solid #b1191a;
 }
+
 .logo {
-    padding-top: 18px;
+    padding-top: 15px;
 }
+
 .registerarea {
-    height: 522px;
+    height: 580px;
     border: 1px solid #ccc;
     margin-top: 20px;
 }
+
 .registerarea h3 {
-    height: 42px;
+    height: 40px;
     border-bottom: 1px solid #ccc;
     background-color: #ececec;
-    line-height: 42px;
     padding: 0 10px;
-    font-size: 18px;
     font-weight: 400;
+    line-height: 40px;
+    font-size: 18px;
 }
-.login {
+
+.registerarea h3 em {
     float: right;
     font-size: 14px;
 }
-.login a {
-    color: #b1191a;
+
+.registerarea a {
+    color: #c81623;
 }
-.reg_from {
+
+.reg_form {
     width: 600px;
-    margin: 50px auto 0;
+    height: 400px;
+    margin: 40px auto 0;
 }
-.reg_from ul li {
-    margin: 20px auto 0;
+
+.reg_form li {
+    margin-bottom: 15px;
 }
-.reg_from ul li label {
+
+.reg_form label {
     display: inline-block;
-    width: 88px;
+    width: 100px;
+    height: 36px;
+    line-height: 36px;
     text-align: right;
 }
-.reg_from ul li .inp {
-    width: 242px;
-    height: 37px;
+
+.inp {
+    width: 238px;
+    height: 34px;
     border: 1px solid #ccc;
+    margin-left: 10px;
 }
-.password {
-    display:hidden;
-}
+
 .error {
-    color: red;
+    color: #df3033;
+    margin-left: 10px;
 }
-.error_icon {
-    display: inline-block;
-    vertical-align: middle;
-    width: 20px;
-    height: 20px;
-    background: url(../images/error_icon.png) no-repeat;
-    margin-top: -2px;
-}
-.success {
-    color: green;
-}
+
+.error_icon,
 .success_icon {
     display: inline-block;
-    vertical-align: middle;
     width: 20px;
     height: 20px;
-    background: url(../images/success_icon.png) no-repeat;
+    background: url(../img/error.png) no-repeat;
+    vertical-align: middle;
     margin-top: -2px;
 }
-.safe {
-    padding-left: 165px;
+
+.success {
+    color: #40b83f;
+    margin-left: 10px;
 }
+
+.success_icon {
+    background-image: url(../img/success.png);
+}
+
+.safe {
+    padding-left: 187px;
+    color: #b2b2b2;
+}
+
 .safe em {
     padding: 0 12px;
+    color: #fff;
 }
+
 .ruo {
     background-color: #de1111;
 }
+
 .zhong {
-    background-color: #f79100;
-}
-.qiang {
     background-color: #40b83f;
 }
+
+.qiang {
+    background-color: #f79100;
+}
+
 .agree {
+    padding-top: 20px;
     padding-left: 100px;
 }
+
 .agree input {
-vertical-align: middle;
+    vertical-align: middle;
+    margin-right: 5px;
 }
+
 .agree a {
     color: #1ba1e6;
 }
-.btn {
+
+.over {
     width: 200px;
     height: 34px;
     background-color: #c81623;
-    font-size: 14px;
+    margin: 30px 0 0 130px;
+    border: none;
     color: #fff;
-    margin: 30px 0 0 80px;
-    border: 0;
+    font-size: 14px;
 }
-.mod_copyright {
+
+.footer {
+    height: 120px;
     text-align: center;
-    padding-top: 20px;
 }
+
 .links {
-    margin-bottom: 15px;
+    margin-top: 20px;
+    height: 30px;
 }
-.links a {
-    margin: 0 3px;
-}
+
 .copyright {
     line-height: 20px;
 }
