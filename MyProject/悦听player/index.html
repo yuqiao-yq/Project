@@ -21,7 +21,7 @@
       </div>
       <div class="center_con">
         <!-- 搜索歌曲列表 -->
-        <div class='song_wrapper'>
+        <div class='song_wrapper' v-cloak>
           <ul class="song_list">
             <li v-for="item in musicList">
               <a href="javascript:;" @click="playMusic(item.id)"></a>
@@ -41,7 +41,7 @@
         <!-- 评论容器 -->
         <div class="comment_wrapper">
           <h5 class='title'>热门留言</h5>
-          <div class='comment_list'>
+          <div class='comment_list' v-cloak>
             <dl v-for="item in hotComments">
               <dt><img :src="item.user.avatarUrl" alt=""></dt>
               <dd class="name">{{ item.nickname}}</dd>

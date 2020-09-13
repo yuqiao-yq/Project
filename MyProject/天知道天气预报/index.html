@@ -29,13 +29,13 @@
     </div>
     <ul class="weather_list">
       <li v-for="item in weatherList">
-        <div class="info_type"><span class="iconfont">{{ item.type }}</span></div>
-        <div class="info_temp">
+        <div class="info_type" v-cloak><span class="iconfont">{{ item.type }}</span></div>
+        <div class="info_temp" v-cloak>
           <b>{{ item.low }}</b>
           ~
           <b>{{ item.high }}</b>
         </div>
-        <div class="info_date"><span>{{ item.date }}</span></div>
+        <div class="info_date" v-cloak><span>{{ item.date }}</span></div>
       </li>
     </ul>
   </div>

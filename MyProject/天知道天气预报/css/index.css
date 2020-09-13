@@ -132,3 +132,8 @@ body{
 .tem .iconfont {
     font-size: 50px;
   }
+  
+  [v-cloak] {
+    display:none;
+    
+    }
