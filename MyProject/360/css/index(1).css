@@ -1,0 +1,190 @@
+/* 清除元素的内外边距 */
+body, p, div, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #010001;
+    min-width: 1200px;
+}
+a {
+    /* 取消链接默认的下划线 */
+    text-decoration: none;
+}
+/* 固定导航栏开始 */
+.header {
+    /* 固定定位 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 48px;
+    background-color: #010001;
+}
+.headerContent {
+    width: 1200px;
+    height: 48px;
+    margin: auto;
+}
+.headerContent img {
+    float: left;
+    margin-top: 10px;
+}
+.nav {
+    float: right;
+    height: 48px;
+    /* 如果行高等于高度，则单行的文字会垂直居中 */
+    line-height: 48px;
+}
+.nav a {
+    color: #a4a4a4;
+    margin-left: 35px;
+}
+.section1 {
+    color: pink;
+    /* 必须先通过../ 返回上一级在去找图片 */
+    background-image: url(../images/section1_bg.jpg);
+    /* 让我们的背景图片在盒子内水平和垂直居中 */
+    background-position:  center;
+}
+.title-box {
+    position: absolute;
+    width: 100%;
+    top: 150px;
+}
+.title-box p {
+    font-size: 60px;
+    /* 文字水平居中 */
+    text-align: center;
+    color: #fff;
+    margin-bottom: 25px;
+    /* 字间距的写法 */
+    letter-spacing: 2px;
+}
+.title-box a {
+    display: block;
+    width: 300px;
+    height: 60px;
+    background-image: url(../images/links.png);
+    margin: auto;
+}
+/* 鼠标经过a连接的写法 */
+.title-box a:hover {
+    /* background-position: x坐标 y坐标; */
+    background-position: -300px 0;
+}
+.ball1 {
+    position: absolute;
+    top: 22.7%;
+    left: 20%;
+    width: 13.2%;
+    /* 调用动画 */
+    animation: ball 5s linear infinite alternate;
+}
+.ball2 {
+    position: absolute;
+    top: 49.8%;
+    left: 65.16%;
+    width: 22.3%;
+     /* 调用动画 */
+     animation: ball 7s linear infinite alternate;
+}
+/* 1. 创建动画 */
+@keyframes ball {
+    from {
+        margin-top: 0;
+    }
+    to {
+        margin-top: -25px;
+    }
+}
+.ship {
+    position: absolute;
+    top: 40.18%;
+    left: 63.96%;
+    width: 7.2%;
+    /* 设置旋转方式 */
+    /* 里面的数值是正数， 则是顺时针旋转，如果是负值则是逆时针旋转 */
+    /* transform: rotate(30deg); */
+    animation: ship 30s linear infinite alternate;
+}
+/* 创建动画 */
+@keyframes ship {
+    form {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-45deg);
+    }
+}
+/* 第二屏的视频代码 */
+.section video {
+    width: 100%;
+    height: 100%;
+}
+.word-content {
+    /* 让文字模块隐藏 */
+    display: none;
+    position: absolute;
+    /* 如果让一个绝地定位的盒子垂直居中 */
+    /* top: 50%走父盒子高度的一半 */
+    top: 50%;
+    left: 18%;
+    /* 往上走自己盒子高度的一半 */
+    transform: translateY(-50%);
+}
+.bigword {
+    font-size: 60px;
+}
+.midword {
+    font-size: 36px;
+}
+.smallword {
+    font-size: 16px;
+    margin-top: 12px;
+}
+.section {
+    color: #fff;
+}
+/* 线条的做法 */
+.line {
+    width: 28px;
+    height: 3px;
+    background-color: #5e5e5e;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.word-content a {
+    display: block;
+    width: 200px;
+    height: 48px;
+    margin-top: 50px;
+    background-image: url(../images/link2.png);
+}
+.word-content a:hover {
+    background-position: -200px 0;
+}
+/* 底部模块开始 */
+.footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 120px;
+    background-color: #131415;
+    text-align: center;
+    padding-top: 38px;
+    color:#4a4a4a;
+    line-height: 22px;
+    font-size: 12px;
+}
+.footer img {
+    /* 可以让图片和文字垂直居中 */
+    vertical-align: middle;
+}
+/* 修改小圆点的颜色 */
+#fp-nav ul li a.active span {
+    background: rgba(255,255,255, .8);
+}

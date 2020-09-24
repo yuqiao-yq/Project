@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>黑马程序员360浏览器</title>
+    <!-- 注意要把这个fullpage文件放到index.css的上面 -->
+    <link rel="stylesheet" href="css/fullpage.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <!-- 固定导航栏   ctrl + / -->
+    <div class="header">
+        <div class="headerContent">
+            <img src="images/logo.png" alt="">
+            <div class="nav">
+                <a href="#">论坛</a>
+                <a href="#">扩展</a>
+                <a href="#">Mac版</a>
+            </div>
+        </div>
+    </div>
+    <!-- 全屏滚动的代码 -->
+    <!-- 注意放在固定导航栏的下面 -->
+    <div id="fullpage">
+        <!-- 这是第一屏 -->
+        <div class="section section1">
+            <div class="title-box">
+                <p>畅快浏览 极致体验</p>
+                <a href="#"></a>
+            </div>
+            <!-- 第一个小球 -->
+            <img src="images/ball1.png" alt="" class="ball1">
+            <!-- 第二个小球 -->
+            <img src="images/ball2.png" alt="" class="ball2">
+            <!-- 卫星图片 -->
+            <img src="images/ship.png" alt="" class="ship">
+        </div>
+        <!-- 这是第二屏 -->
+        <div class="section">
+            <video autoplay loop muted>
+                <source src="https://s2.ssl.qhres.com/static/dfeefadde568eab0.mp4" type="video/mp4">
+                您的浏览器版本太low了， 不能正常显示视频
+            </video>
+            <!-- 文字模块 -->
+            <div class="word-content">
+                <p class="bigword">极速</p>
+                <div class="line"></div>
+                <p class="midword">Chromium78全新内核</p>
+                <p class="smallword">性能强劲，快如闪电。</p>
+                <a href="#"></a>
+            </div>
+        </div>
+        <!-- 第三屏 -->
+        <div class="section">
+            <video autoplay loop muted>
+                <source src="https://s3.ssl.qhres.com/static/9bebcedf292f327e.mp4" type="video/mp4">
+                您的浏览器版本太low了， 不能正常显示视频
+            </video>
+            <!-- 文字模块 -->
+            <div class="word-content">
+                <p class="bigword">极酷</p>
+                <div class="line"></div>
+                <p class="midword">暗夜炫黑模式</p>
+                <p class="smallword">定义酷，定义你。</p>
+                <a href="#"></a>
+            </div>
+        </div>
+        <!-- 第四屏 -->
+        <div class="section">
+            <video autoplay loop muted>
+                <source src="https://s1.ssl.qhres.com/static/fdf92889c539303c.mp4" type="video/mp4">
+                您的浏览器版本太low了， 不能正常显示视频
+            </video>
+            <!-- 文字模块 -->
+            <div class="word-content">
+                <p class="bigword">极安全</p>
+                <div class="line"></div>
+                <p class="midword">DNS加密防劫持</p>
+                <p class="smallword">安全升级，肆意无忌。</p>
+                <a href="#"></a>
+            </div>
+        </div>
+        <!-- 第五屏 -->
+        <div class="section">
+            <video autoplay loop muted>
+                <source src="https://s1.ssl.qhres.com/static/7e7f0ec4a0cc7a66.mp4" type="video/mp4">
+                您的浏览器版本太low了， 不能正常显示视频
+            </video>
+            <!-- 文字模块 -->
+            <div class="word-content">
+                <p class="bigword">极视界</p>
+                <div class="line"></div>
+                <p class="midword">4K高清视频播放</p>
+                <p class="smallword">还原真实之美 ，尽显万物本色。</p>
+                <a href="#"></a>
+            </div>
+            <!-- 底部模块 -->
+            <div class="footer">
+                Copyright © 2005-2019 360.CN All Rights Reserved 360互联网安全中心 隐私权政策 京ICP证080047号 <br>
+                <img src="images/icon.png" alt=""> 京公网安备 11000002000006号
+            </div>
+        </div>
+    </div>
+    <!-- 必须先引入  jquery的js文件 -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/fullpage.js"></script>
+    <!-- 必须放到这里 -->
+
+    <!-- 调用fullpage的功能 -->
+    <script>
+        $(function () {
+            $('#fullpage').fullpage({
+                'navigation': true,
+                // 滚动到当前屏幕，文字模块渐渐显示出来
+                afterLoad: function () {
+                    $(this).find('.word-content').fadeIn();
+                },
+                // 离开当前屏幕，文字模块渐渐淡出
+                onLeave: function () {
+                    $(this).find('.word-content').fadeOut();
+                },
+            });
+        });
+    </script>
+</body>
+
+</html>
